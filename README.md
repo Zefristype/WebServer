@@ -49,6 +49,7 @@ UPDATE:
 https://webserver-fpht.onrender.com/api/temperatures/:id
 
 {
-  temperature: Number
+  temperature: Number,
+  
   time: String
 }
