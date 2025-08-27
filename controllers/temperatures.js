@@ -33,7 +33,6 @@ const add = async (req, res, next) => {
   res.status(201).json(result);
 };
 const deleteById = async (req, res, next) => {
-  console.log(req.params);
   const { temperatureId } = req.params;
   const result = await temperatures.removeTemperature(temperatureId);
   if (!result) {
@@ -45,10 +44,6 @@ const updateById = async (req, res, next) => {
   if (Object.keys(req.body).length === 0) {
     throw HttpError(400, "missing fields");
   }
-
-  if (error) {
-    throw HttpError(400, error.message);
-  }
   const { temperatureId } = req.params;
   const result = await temperatures.updateTemperature(temperatureId, req.body);
   if (!result) {
@@ -56,6 +51,21 @@ const updateById = async (req, res, next) => {
   }
   res.status(201).json(result);
 };
+
+// const updateById = async (req, res, next) => {
+//     if (!req.body || Object.keys(req.body).length === 0) {
+//       throw HttpError(400, "missing fields");
+//     }
+//     const { temperatureId } = req.params;
+//     const result = await temperatures.updateTemperature(
+//       temperatureId,
+//       req.body
+//     );
+//     if (!result) {
+//       throw HttpError(404, "Not Found");
+//     }
+//     res.status(201).json(result);
+// };
 
 module.exports = {
   getAll: ctrlWrapper(getAll),
