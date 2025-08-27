@@ -34,7 +34,8 @@ Body:
 
 
 {
-  temperature: Number
+  temperature: Number,
+  
   time: String
 }
 
