@@ -17,7 +17,9 @@ https://webserver-fpht.onrender.com/api/temperatures
 
 
 GET:
+
 Get all - https://webserver-fpht.onrender.com/api/temperatures
+
 Get by id - https://webserver-fpht.onrender.com/api/temperatures/{id}
 
 
@@ -42,6 +44,7 @@ https://webserver-fpht.onrender.com/api/temperatures/:id
 UPDATE:
 
 https://webserver-fpht.onrender.com/api/temperatures/:id
+
 {
   temperature: Number
   time: String
