@@ -22,7 +22,7 @@ GET:
 
 Get all - https://webserver-fpht.onrender.com/api/temperatures
 
-Get by id - https://webserver-fpht.onrender.com/api/temperatures/{id}
+Get by id - https://webserver-fpht.onrender.com/api/temperatures/:id
 
 
 
